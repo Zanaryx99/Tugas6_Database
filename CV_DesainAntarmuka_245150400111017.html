@@ -1,0 +1,432 @@
+<html>
+<head>
+    <title>Tugas CV Desain Antarmuka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background: #fff;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+        }
+
+        .container .left_side {
+            position: relative;
+            background: #003147;
+            padding: 40px;
+            color: #fff;
+        }
+
+        .profileText {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .profileText .imgbx {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            margin-bottom: 15px;
+        }
+
+        .profileText .imgbx img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profileText h2 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+
+        .profileText h2 span {
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        .Kontak{
+            padding-top: 40px;
+        }
+
+        .title{
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .Kontak ul{
+            position: relative;
+        }
+
+        .Kontak ul li{
+            position: relative;
+            list-style: none;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .Kontak ul li .icon{
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+
+        .Kontak ul li span{
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .Kontak.Pendidikan li {
+            margin-bottom: 15px;
+        }
+
+        .Kontak.Pendidikan h5 {
+            color: #03a9f4;
+            font-weight: 500;
+        }
+
+        .Kontak.Pendidikan h4:nth-child(2) {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .Kontak.Pendidikan h4 {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .Kontak.Bahasa .percent{
+            position: relative;
+            width:100%;
+            height:6px;
+            background: #081921;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .Kontak.Bahasa .percent div{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+            background: #03a9f4;
+
+
+        }
+
+        .container .right_side {
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+
+        .Profil{
+            margin-bottom: 50px;
+        }
+
+        .Profil:last-child{
+            margin-bottom: 0;
+        }
+
+        .title2{
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .profil .box{
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+
+        .profil .box .Tahun_organisasi{
+            min-width: 150px;
+        }
+
+        .profil .box .Tahun_organisasi h5{
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+        }
+
+        .profil .box .text h4{
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+        }
+
+        .Kemampuan .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Kemampuan .box h4{
+            text-transform: uppercase;
+            color: #848c99;
+            font-weight: 500;
+        }
+
+        .Kemampuan .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+        }
+        
+        .Kemampuan .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+
+        .Minat ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .Minat ul li{
+            list-style: none;
+            color: #333;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .Minat ul li .fa{
+            color: #03a9f4;
+            font-size: 18px;
+            width: 20px;
+        }
+
+        @media (max-width:1000px){
+            .container{
+                margin: 10px;
+                grid-template-columns: repeat(1,1fr);
+            }
+            .Minat ul{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media (max-width:600px){
+            .about .box{
+                flex-direction: column;
+            }
+            .about .box .Tahun_organisasi{
+                margin-bottom: 5px;
+            }
+            .Minat ul{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .Kemampuan .box{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profileText">
+                <div class="imgbx">
+                    <img src="FotoCV.jpg" alt="Profile Photo">
+                </div>
+                <h2>Kharan Naethan Nizam <br><span>Mahasiswa SI</span></h2>
+            </div>
+        <div class="Kontak">
+            <h3 class=" title">Kontak</h3>
+            <ul>
+              <li>
+                <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <span class="text"> +62 819-0513-7498</span>
+              </li>
+                <li>
+                  <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                  <span class="text"> kharannizam99@student.ub.ac.id</span>
+                </li>
+                <li>
+                  <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                  <span class="text"> www.linkedin.com/in/kharannizam/</span>
+                </li>
+                <li>
+                  <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  <span class="text"> Malang, Jawa Timur, Indonesia</span>
+                </li>
+              </ul>
+        </div>
+
+        <div class="Kontak Pendidikan">
+            <h3 class=" title">Pendidikan</h3>
+            <ul>
+              <li>
+                <h5>2024 - Sekarang</h5>
+                <h4>Sistem Informasi</h4>
+                <h4>Universitas Brawijaya</h4>
+              </li>
+              <li>
+                <h5>2021 - 2024</h5>
+                <h4>IPA (Ilmu Pengetahuan Alam)</h4>
+                <h4>SMAN 4 Bekasi</h4>
+              </li>
+              </ul>
+        </div>
+
+        <div class="Kontak Bahasa">
+            <h3 class=" title">Bahasa</h3>
+            <ul>
+              <li>
+                <span class="text">Bahasa Indonesia</span>
+                <span class="percent">
+                <div style="width: 90%;"></div>
+            </span>
+              </li>
+              <li>
+                <span class="text">Bahasa Inggris</span>
+                <span class="percent">
+                    <div style="width: 80%;"></div>
+                </span>
+              </li>
+            </ul>
+        </div>
+
+        </div>
+
+        <div class="right_side">
+            <div class="Profil">
+                <h2 class="title2">Profil</h2>
+                <P>
+                    Nama saya Kharan Naethan Nizam. Saat ini adalah seorang mahasiswa Sistem Informasi di Fakultas Ilmu Komputer, Universitas
+                    Brawijaya. Saya memiliki minat dalam pengembangan teknologi dan tata kelola bisnis. Saya berpengalaman dalam merancang workshop, 
+                    diskusi, dan kuis edukatif, serta terlibat dalam strategi pemasaran, pengelolaan sumber daya, dan pengembangan bisnis berbasis nilai.
+                </P>
+            </div>
+            <div class="Profil">
+                <h2 class="title2">Pengalaman Organisasi</h2>
+                <div class="box">
+                    <div class="Tahun_organisasi">
+                        <h5>2021 - 2023</h5>
+                        <h5>SCI-TOS</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Anggota dari divisi Pengetahuan Umum</h4>
+                        <p>Berkontribusi aktif dalam inisiatif pendidikan SCI-TOS. Bekerja sama dengan anggota tim untuk merancang dan 
+                            mengadakan workshop yang mendorong berpikir kritis serta memperluas pengetahuan dalam berbagai topik</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Tahun_organisasi">
+                        <h5>2021 - 2023</h5>
+                        <h5>FOSMA</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Anggota, Divisi Muslim Entrepreneur</h4>
+                        <p>Berperan sebagai anggota di Divisi Muslim Entrepreneur FOSMA yang berfokus pada pengelolaan bisnis 
+                            eksternal untuk mendukung pengembangan organisasi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Profil Kemampuan">
+                <h2 class="title2">Kemampuan</h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Microsoft Word</h4>
+                    <div class="percent">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Microsoft Powerpoint</h4>
+                    <div class="percent">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Microsoft Excel</h4>
+                    <div class="percent">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="Profil Minat">
+                    <h2 class="title2">Minat</h2>
+                    <ul>
+                        <li><i class="fa fa-gamepad" aria-hidden="true"></i> Main Game</li>
+                        <li><i class="fa fa-book" aria-hidden="true"></i> Membaca Buku</li>
+                        <li><i class="fa fa-music" aria-hidden="true"></i> Mendengarkan Lagu</li>
+                    </ul>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
